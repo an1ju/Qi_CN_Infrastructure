@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Authorize_Practice</name>
+    </assembly>
+    <members>
+        <member name="T:Authorize_Practice.Controllers.TestController">
+            <summary>
+            控制器地址，本例子直接使用Test即可。
+            </summary>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.TestController.#ctor(Authorize_Practice.Controllers.SampleData)">
+            <summary>
+            构造函数，接收注入的数据。
+            </summary>
+            <param name="sampleData"></param>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.TestController.SearchIndex(System.Int32)">
+            <summary>
+            Get 某一类或某一个数据
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.TestController.Get">
+            <summary>
+            GetAll
+            获取全部数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.TestController.Get(System.Int32)">
+            <summary>
+            GetByID
+            获取指定的数据，查询
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.TestController.Post(Authorize_Practice.Controllers.TestData)">
+            <summary>
+            Add
+            Post方式增加数据，新增
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.TestController.Put(System.Int32,Authorize_Practice.Controllers.TestData)">
+            <summary>
+            Update
+            Put方式提交数据，修改
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.TestController.Delete(System.Int32)">
+            <summary>
+            Delete
+            删除
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="T:Authorize_Practice.Controllers.SampleData">
+            <summary>
+            示例数据
+            </summary>
+        </member>
+        <member name="F:Authorize_Practice.Controllers.SampleData.data">
+            <summary>
+            调用结构
+            </summary>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.SampleData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Authorize_Practice.Controllers.TestData">
+            <summary>
+            测试数据
+            </summary>
+        </member>
+        <member name="P:Authorize_Practice.Controllers.TestData.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:Authorize_Practice.Controllers.TestData.Data">
+            <summary>
+            文本数据(字符串)
+            </summary>
+        </member>
+        <member name="T:Authorize_Practice.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authorize_Practice.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Authorize_Practice.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Authorize_Practice.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authorize_Practice.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:Authorize_Practice.Startup.Configuration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Authorize_Practice.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Authorize_Practice.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
