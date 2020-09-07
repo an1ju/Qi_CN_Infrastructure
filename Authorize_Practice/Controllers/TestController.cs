@@ -134,6 +134,8 @@ namespace Authorize_Practice.Controllers
 
     }
 
+    #region 本例子使用的数据类
+
     /// <summary>
     /// 示例数据
     /// </summary>
@@ -149,11 +151,14 @@ namespace Authorize_Practice.Controllers
         /// </summary>
         public SampleData()
         {
+            //创建测试数据
             for (int i = 0; i < 10; i++)
             {
-                TestData temp = new TestData();
-                temp.Id = i + 1;
-                temp.Data = string.Format("{0} See id", i + 1);
+                TestData temp = new TestData
+                {
+                    Id = i + 1,
+                    Data = string.Format("{0} See id", i + 1)
+                };
                 data.Add(temp);
             }
         }
@@ -176,4 +181,11 @@ namespace Authorize_Practice.Controllers
         /// </summary>
         public string Data { get => _data; set => _data = value; }
     }
+    #endregion
+
+
+    #region API返回的数据结构
+
+    #endregion
+
 }

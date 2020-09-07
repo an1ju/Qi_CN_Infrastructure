@@ -4,6 +4,40 @@
         <name>Authorize_Practice</name>
     </assembly>
     <members>
+        <member name="T:Authorize_Practice.Controllers.ChineseLanguageController">
+            <summary>
+            接口调用
+            </summary>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.ChineseLanguageController.Get">
+            <summary>
+            查询我使用的语言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.ChineseLanguageController.MyLanguage">
+            <summary>
+            接口实现
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Authorize_Practice.Controllers.EnglistLanguageController">
+            <summary>
+            接口调用
+            </summary>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.EnglistLanguageController.Get">
+            <summary>
+            查询我使用的语言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Authorize_Practice.Controllers.EnglistLanguageController.MyLanguage">
+            <summary>
+            接口实现
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Authorize_Practice.Controllers.TestController">
             <summary>
             控制器地址，本例子直接使用Test即可。
@@ -20,7 +54,7 @@
             Get 某一类或某一个数据
             </summary>
             <param name="id"></param>
-            <returns></returns>
+            <returns>返回值是-1就是没找到</returns>
         </member>
         <member name="M:Authorize_Practice.Controllers.TestController.Get">
             <summary>
@@ -42,7 +76,7 @@
             Add
             Post方式增加数据，新增
             </summary>
-            <param name="value"></param>
+            <param name="value">数据结构体</param>
         </member>
         <member name="M:Authorize_Practice.Controllers.TestController.Put(System.Int32,Authorize_Practice.Controllers.TestData)">
             <summary>
@@ -50,7 +84,7 @@
             Put方式提交数据，修改
             </summary>
             <param name="id"></param>
-            <param name="value"></param>
+            <param name="value">数据结构体</param>
         </member>
         <member name="M:Authorize_Practice.Controllers.TestController.Delete(System.Int32)">
             <summary>
@@ -87,6 +121,11 @@
         <member name="P:Authorize_Practice.Controllers.TestData.Data">
             <summary>
             文本数据(字符串)
+            </summary>
+        </member>
+        <member name="T:Authorize_Practice.Interface.ITestLanguage">
+            <summary>
+            接口测试
             </summary>
         </member>
         <member name="T:Authorize_Practice.Program">
