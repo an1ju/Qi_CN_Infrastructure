@@ -89,6 +89,12 @@
             文本数据(字符串)
             </summary>
         </member>
+        <member name="M:Authorize_Practice.InterFace.ILanguages.GetMyLanguage">
+            <summary>
+            获取我的语言
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Authorize_Practice.Program">
             <summary>
             
