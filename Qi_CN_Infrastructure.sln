@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Practice", "Practice", "{C432CA3F-9031-42D0-B424-8B981F6BAECB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authorize_Practice", "Authorize_Practice\Authorize_Practice.csproj", "{81D4E77F-EA44-444A-A1C1-2C5962ACB8C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Authorize_Practice", "Authorize_Practice\Authorize_Practice.csproj", "{81D4E77F-EA44-444A-A1C1-2C5962ACB8C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

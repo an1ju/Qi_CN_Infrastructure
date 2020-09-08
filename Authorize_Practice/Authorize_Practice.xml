@@ -4,40 +4,6 @@
         <name>Authorize_Practice</name>
     </assembly>
     <members>
-        <member name="T:Authorize_Practice.Controllers.ChineseLanguageController">
-            <summary>
-            接口调用
-            </summary>
-        </member>
-        <member name="M:Authorize_Practice.Controllers.ChineseLanguageController.Get">
-            <summary>
-            查询我使用的语言
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Authorize_Practice.Controllers.ChineseLanguageController.MyLanguage">
-            <summary>
-            接口实现
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:Authorize_Practice.Controllers.EnglistLanguageController">
-            <summary>
-            接口调用
-            </summary>
-        </member>
-        <member name="M:Authorize_Practice.Controllers.EnglistLanguageController.Get">
-            <summary>
-            查询我使用的语言
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Authorize_Practice.Controllers.EnglistLanguageController.MyLanguage">
-            <summary>
-            接口实现
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:Authorize_Practice.Controllers.TestController">
             <summary>
             控制器地址，本例子直接使用Test即可。
@@ -121,11 +87,6 @@
         <member name="P:Authorize_Practice.Controllers.TestData.Data">
             <summary>
             文本数据(字符串)
-            </summary>
-        </member>
-        <member name="T:Authorize_Practice.Interface.ITestLanguage">
-            <summary>
-            接口测试
             </summary>
         </member>
         <member name="T:Authorize_Practice.Program">
