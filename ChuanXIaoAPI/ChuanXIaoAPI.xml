@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChuanXIaoAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ChuanXIaoAPI.Controllers.DataController.SayHello">
+            <summary>
+            API运行测试，成功了就有Hello。
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
