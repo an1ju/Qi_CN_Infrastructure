@@ -10,5 +10,95 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:ChuanXIaoAPI.DataClass.Account">
+            <summary>
+            账目：这个是整个项目组（一个传销机构还敢叫项目组？！），整体的骗得的账款，是实打实的账款。
+            赃款！！！
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Account.Id">
+            <summary>
+            流水编号
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Account.Money">
+            <summary>
+            投入资金
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Account.Dt">
+            <summary>
+            日期时间
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Account.PersonID">
+            <summary>
+            人员编号
+            </summary>
+        </member>
+        <member name="T:ChuanXIaoAPI.DataClass.MakeMoneyToParent">
+            <summary>
+            向上层机构分配赃款。
+            分赃流水
+            这个类的结构与Account一样，但用法不同。
+            
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.MakeMoneyToParent.Id">
+            <summary>
+            流水编号
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.MakeMoneyToParent.Money">
+            <summary>
+            赚得赃款
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.MakeMoneyToParent.Dt">
+            <summary>
+            入账日期
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.MakeMoneyToParent.PersonID">
+            <summary>
+            人员编号
+            </summary>
+        </member>
+        <member name="T:ChuanXIaoAPI.DataClass.Person">
+            <summary>
+            就是一个人。一个商户。一个受害者。
+            如果是最顶端的，或比较高级的，那还是有钱图的。
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Person.Id">
+            <summary>
+            编号
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Person.Name">
+            <summary>
+            名字
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Person.ParentID">
+            <summary>
+            推荐人编号（上级编号）
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Person.MoneyOut">
+            <summary>
+            投入资金
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Person.MoneyIn">
+            <summary>
+            回收资金
+            </summary>
+        </member>
+        <member name="P:ChuanXIaoAPI.DataClass.Person.PocketPrecent">
+            <summary>
+            分成比例，自己与上级的比例
+            </summary>
+        </member>
     </members>
 </doc>
