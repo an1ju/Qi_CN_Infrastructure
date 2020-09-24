@@ -12,6 +12,7 @@
         private decimal _moneyOut;
         private decimal _moneyIn;
         private decimal _pocketPrecent;
+        private string _bindSecret;
 
         /// <summary>
         /// 编号
@@ -39,5 +40,9 @@
         /// 使用时，把自己下线的资金，乘以此值，留个自己。剩下的向自己的上线传递
         /// </summary>
         public decimal PocketPrecent { get => _pocketPrecent; set => _pocketPrecent = value; }
+        /// <summary>
+        /// 绑定秘钥，依靠此字段，从微信小程序登录。
+        /// </summary>
+        public string BindSecret { get => _bindSecret; set => _bindSecret = value; }
     }
 }

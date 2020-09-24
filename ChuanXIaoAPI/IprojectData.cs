@@ -12,8 +12,9 @@ namespace ChuanXIaoAPI
         /// </summary>
         /// <param name="parentID">-1 创建ID为0的祖宗用户</param>
         /// <param name="name">用户名称</param>
+        /// <param name="secret">秘钥。微信登录凭证</param>
         /// <returns></returns>
-        DataClass.Person CreatePerson(int parentID,string name);
+        DataClass.Person CreatePerson(int parentID,string name, string secret);
         /// <summary>
         /// 查看用户
         /// </summary>
@@ -32,9 +33,19 @@ namespace ChuanXIaoAPI
         /// <param name="name"></param>
         /// <returns></returns>
         DataClass.Person EditPersonName(int personID, string name);
-
-
-
+        /// <summary>
+        /// 修改资金分配比例
+        /// </summary>
+        /// <param name="personID"></param>
+        /// <param name="pocketPrecent"></param>
+        /// <returns></returns>
+        DataClass.Person EditPersonPocketPrecent(int personID, decimal pocketPrecent);
+        /// <summary>
+        /// 创建分享链接
+        /// </summary>
+        /// <param name="personID"></param>
+        /// <returns></returns>
+        string CreateShareLink(int personID);
         /// <summary>
         /// 用户存钱
         /// </summary>

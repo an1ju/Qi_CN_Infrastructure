@@ -55,6 +55,11 @@ namespace ChuanXIaoAPI.Controllers
         {
             return project.EditPersonName(personID, name);
         }
+        [HttpGet("EditPersonPocketPrecent/{personID}/{pocketPrecent}")]
+        public DataClass.Person EditPersonPocketPrecent(int personID, decimal pocketPrecent)
+        {
+            return project.EditPersonPocketPrecent(personID, pocketPrecent);
+        }
         /// <summary>
         /// 投资
         /// </summary>
@@ -104,16 +109,31 @@ namespace ChuanXIaoAPI.Controllers
             }
         }
         /// <summary>
-        /// 每名用户进行投资
+        /// 每名用户进行投资：老用户先存，新用户后存
+        /// 区别是，可以提高老用户获取不正当收入的上限
         /// </summary>
         /// <param name="money"></param>
-        [HttpPost("ChuanXiaoSaveMoney/Test02/{money}")]
-        public void ChuanXiaoSaveMoney_Test02(decimal money)
+        [HttpPost("ChuanXiaoSaveMoney_ASC/Test02/{money}")]
+        public void ChuanXiaoSaveMoney_ASC_Test02(decimal money)
         {
             List<DataClass.Person> temp = project.GetAllPeople();
             for (int i = 0; i < temp.Count; i++)
             {
                 project.PersonSaveMoney(temp[i], money);
+            }
+        }
+
+        /// <summary>
+        /// 每名用户进行投资：新用户先存，老用户后存
+        /// </summary>
+        /// <param name="money"></param>
+        [HttpPost("ChuanXiaoSaveMoney_DESC/Test02/{money}")]
+        public void ChuanXiaoSaveMoney_DESC_Test03(decimal money)
+        {
+            List<DataClass.Person> temp = project.GetAllPeople();
+            for (int i = temp.Count; i > 0; i--)
+            {
+                project.PersonSaveMoney(temp[i-1], money);
             }
         }
 

@@ -33,10 +33,10 @@ namespace ChuanXIaoAPI
             
         }
 
-        public Person CreatePerson(int parentID,string name)
+        public Person CreatePerson(int parentID,string name, string secret)
         {
 
-            Person r = Tools.ToolsForProject.MakePerson(parentID, name, PeopleList.Count);
+            Person r = Tools.ToolsForProject.MakePerson(parentID, name, secret, PeopleList.Count);
             if (parentID == -1)
             {
                 //创建祖宗，基本不会有错误。
@@ -83,6 +83,44 @@ namespace ChuanXIaoAPI
             }
             return temp;
         }
+        /// <summary>
+        /// 修改资金分配比例
+        /// </summary>
+        /// <param name="personID"></param>
+        /// <param name="pocketPrecent"></param>
+        /// <returns></returns>
+        public DataClass.Person EditPersonPocketPrecent(int personID, decimal pocketPrecent)
+        {
+            DataClass.Person temp = Tools.ToolsForProject.GetPersonData_In_Person(PeopleList, personID);
+            if (temp != null)
+            {
+                temp.PocketPrecent = pocketPrecent;
+            }
+            else
+            {
+                //父节点不可用。
+                throw new Exception("参数：【personID】输入错误，查无此人，请核对。");
+            }
+            return temp;
+        }
+
+        public string CreateShareLink(int personID)
+        {
+            string r = "";
+            DataClass.Person temp = Tools.ToolsForProject.GetPersonData_In_Person(PeopleList, personID);
+            if (temp != null)
+            {
+                r = $"{temp.Id}";
+            }
+            else
+            {
+                //父节点不可用。
+                throw new Exception("参数：【personID】输入错误，查无此人，请核对。");
+            }
+            return r;
+        }
+
+
         /// <summary>
         /// 资金分配：这部分可以算是赚钱
         /// </summary>

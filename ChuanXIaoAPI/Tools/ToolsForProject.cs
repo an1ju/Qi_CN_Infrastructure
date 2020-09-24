@@ -13,9 +13,10 @@ namespace ChuanXIaoAPI.Tools
         /// </summary>
         /// <param name="parentID"></param>
         /// <param name="name"></param>
+        /// <param name="secret"></param>
         /// <param name="nowCount">当前List的Count，为了编写ID</param>
         /// <returns></returns>
-        public static DataClass.Person MakePerson(int parentID, string name,int nowCount)
+        public static DataClass.Person MakePerson(int parentID, string name, string secret, int nowCount)
         {
             DataClass.Person temp = new DataClass.Person();
             temp.Id = nowCount;
@@ -24,6 +25,7 @@ namespace ChuanXIaoAPI.Tools
             temp.MoneyOut = 0;
             temp.PocketPrecent = ProjectData.FEN_PEI_PRECENT;//暂时留个默认值
             temp.ParentID = parentID;
+            temp.BindSecret = secret;
 
             return temp;
         }
