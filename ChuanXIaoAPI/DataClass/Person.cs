@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace ChuanXIaoAPI.DataClass
+﻿namespace ChuanXIaoAPI.DataClass
 {
     /// <summary>
     /// 就是一个人。一个商户。一个受害者。
@@ -12,7 +7,7 @@ namespace ChuanXIaoAPI.DataClass
     public class Person
     {
         private int _id;
-        private int _name;
+        private string _name;
         private int _parentID;
         private decimal _moneyOut;
         private decimal _moneyIn;
@@ -25,7 +20,7 @@ namespace ChuanXIaoAPI.DataClass
         /// <summary>
         /// 名字
         /// </summary>
-        public int Name { get => _name; set => _name = value; }
+        public string Name { get => _name; set => _name = value; }
         /// <summary>
         /// 推荐人编号（上级编号）
         /// </summary>
@@ -39,7 +34,9 @@ namespace ChuanXIaoAPI.DataClass
         /// </summary>
         public decimal MoneyIn { get => _moneyIn; set => _moneyIn = value; }
         /// <summary>
+        /// 数据范围：0-1   eg. 0.7
         /// 分成比例，自己与上级的比例
+        /// 使用时，把自己下线的资金，乘以此值，留个自己。剩下的向自己的上线传递
         /// </summary>
         public decimal PocketPrecent { get => _pocketPrecent; set => _pocketPrecent = value; }
     }

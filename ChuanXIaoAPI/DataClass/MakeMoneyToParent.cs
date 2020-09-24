@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ChuanXIaoAPI.DataClass
 {
@@ -17,6 +14,7 @@ namespace ChuanXIaoAPI.DataClass
         private decimal _money;
         private DateTime _dt;
         private int _personID;
+        private int _accountID;
 
         /// <summary>
         /// 流水编号
@@ -34,5 +32,9 @@ namespace ChuanXIaoAPI.DataClass
         /// 人员编号
         /// </summary>
         public int PersonID { get => _personID; set => _personID = value; }
+        /// <summary>
+        /// 入账编号：资金来源
+        /// </summary>
+        public int AccountID { get => _accountID; set => _accountID = value; }
     }
 }

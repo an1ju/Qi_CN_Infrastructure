@@ -10,10 +10,31 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:ChuanXIaoAPI.Controllers.DataController.SaveMoney(ChuanXIaoAPI.DataClass.Person,System.Decimal)">
+            <summary>
+            投资
+            </summary>
+            <param name="person">用户数据</param>
+            <param name="moneyOut">投资金额</param>
+            <returns></returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.Controllers.DataController.ChuanXiaoCreate_Test01(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            自动测试01
+            </summary>
+            <param name="stepCount">多少个层次</param>
+            <param name="everyMemberHaveChildCount">每个成员下线数量</param>
+        </member>
+        <member name="M:ChuanXIaoAPI.Controllers.DataController.ChuanXiaoSaveMoney_Test02(System.Decimal)">
+            <summary>
+            每名用户进行投资
+            </summary>
+            <param name="money"></param>
+        </member>
         <member name="T:ChuanXIaoAPI.DataClass.Account">
             <summary>
             账目：这个是整个项目组（一个传销机构还敢叫项目组？！），整体的骗得的账款，是实打实的账款。
-            赃款！！！
+            赃款！！！单条账目。
             </summary>
         </member>
         <member name="P:ChuanXIaoAPI.DataClass.Account.Id">
@@ -64,6 +85,11 @@
             人员编号
             </summary>
         </member>
+        <member name="P:ChuanXIaoAPI.DataClass.MakeMoneyToParent.AccountID">
+            <summary>
+            入账编号：资金来源
+            </summary>
+        </member>
         <member name="T:ChuanXIaoAPI.DataClass.Person">
             <summary>
             就是一个人。一个商户。一个受害者。
@@ -97,8 +123,124 @@
         </member>
         <member name="P:ChuanXIaoAPI.DataClass.Person.PocketPrecent">
             <summary>
+            数据范围：0-1   eg. 0.7
             分成比例，自己与上级的比例
+            使用时，把自己下线的资金，乘以此值，留个自己。剩下的向自己的上线传递
             </summary>
+        </member>
+        <member name="M:ChuanXIaoAPI.IprojectData.CreatePerson(System.Int32,System.String)">
+            <summary>
+            创建一个用户
+            </summary>
+            <param name="parentID">-1 创建ID为0的祖宗用户</param>
+            <param name="name">用户名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.IprojectData.SearchPerson(System.Int32)">
+            <summary>
+            查看用户
+            </summary>
+            <param name="personID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.IprojectData.GetAllPeople">
+            <summary>
+            查看全部用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.IprojectData.EditPersonName(System.Int32,System.String)">
+            <summary>
+            修改用户名
+            </summary>
+            <param name="personID"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.IprojectData.PersonSaveMoney(ChuanXIaoAPI.DataClass.Person,System.Decimal)">
+            <summary>
+            用户存钱
+            </summary>
+            <param name="person">用户的全部信息</param>
+            <param name="moneyIn">存入金额</param>
+            <returns>返回用户信息</returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.IprojectData.MakeMoney(System.Int32,System.Decimal,System.Int32,System.String@)">
+            <summary>
+            款项分配
+            </summary>
+            <param name="parentID">上层ID</param>
+            <param name="moneyLess">资金数额、资金余额：因为这个要递归形式向下传递使用</param>
+            <param name="accountID">资金来源</param>
+            <param name="message">传递信息</param>
+            <returns>字符串反馈结果，我想写：分配给多少个人</returns>
+        </member>
+        <member name="T:ChuanXIaoAPI.ProjectData">
+            <summary>
+            项目数据
+            </summary>
+        </member>
+        <member name="F:ChuanXIaoAPI.ProjectData.FEN_PEI_PRECENT">
+            <summary>
+            赃款分配比较默认值   自己与上线比值，或者说自身分红占比。
+            数据范围：0-1  即0-100%
+            </summary>
+        </member>
+        <member name="F:ChuanXIaoAPI.ProjectData.FAN_BEI_MULTIPLY">
+            <summary>
+            用户MoneyOut乘以此系数。就是最大收益数据。
+            </summary>
+        </member>
+        <member name="M:ChuanXIaoAPI.ProjectData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:ChuanXIaoAPI.ProjectData.MakeMoney(System.Int32,System.Decimal,System.Int32,System.String@)">
+            <summary>
+            资金分配：这部分可以算是赚钱
+            </summary>
+            <param name="parentID"></param>
+            <param name="moneyLess"></param>
+            <param name="accountID">资金来源</param>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.ProjectData.PersonSaveMoney(ChuanXIaoAPI.DataClass.Person,System.Decimal)">
+            <summary>
+            被骗用户投资，相当于花钱。
+            </summary>
+            <param name="person"></param>
+            <param name="moneyOut"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.Tools.ToolsForProject.MakePerson(System.Int32,System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="parentID"></param>
+            <param name="name"></param>
+            <param name="nowCount">当前List的Count，为了编写ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.Tools.ToolsForProject.MakeMoneyAccount(System.Int32,System.Decimal,System.Int32)">
+            <summary>
+            用户存钱时使用，入资金池
+            </summary>
+            <param name="personID"></param>
+            <param name="money"></param>
+            <param name="nowCount">当前List的Count，为了编写ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:ChuanXIaoAPI.Tools.ToolsForProject.MakeMoneyIn(System.Int32,System.Decimal,System.Int32,System.Int32)">
+            <summary>
+            资金分配时使用，赃款分配
+            </summary>
+            <param name="personID"></param>
+            <param name="money"></param>
+            <param name="accountID">资金来源，从哪里来的</param>
+            <param name="nowCount"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

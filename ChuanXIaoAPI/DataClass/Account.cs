@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ChuanXIaoAPI.DataClass
 {
     /// <summary>
     /// 账目：这个是整个项目组（一个传销机构还敢叫项目组？！），整体的骗得的账款，是实打实的账款。
-    /// 赃款！！！
+    /// 赃款！！！单条账目。
     /// </summary>
     public class Account
     {

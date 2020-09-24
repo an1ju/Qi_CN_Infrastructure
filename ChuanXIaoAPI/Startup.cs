@@ -28,6 +28,8 @@ namespace ChuanXIaoAPI
         {
             services.AddControllers();
 
+            services.AddSingleton<ProjectData, ProjectData>();
+
             //swagger
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo
